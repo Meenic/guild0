@@ -1,0 +1,24 @@
+{
+  "name": "@guild0/db",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "lint": "biome lint --write",
+    "format": "biome format --write",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2"
+  },
+  "devDependencies": {
+    "@guild0/tsconfig": "workspace:",
+    "@types/node": "^25.1.0",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5.9.2"
+  }
+}
