@@ -36,9 +36,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.4.15
         version: 2.4.15
-      '@guild0/typescript-config':
+      '@guild0/tsconfig':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../packages/tsconfig
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.3.0
@@ -61,7 +61,7 @@ importers:
         specifier: ^5.9.2
         version: 5.9.2
 
-  packages/typescript-config: {}
+  packages/tsconfig: {}
 
   packages/ui:
     dependencies:
@@ -99,9 +99,9 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
-      '@guild0/typescript-config':
+      '@guild0/tsconfig':
         specifier: workspace:*
-        version: link:../typescript-config
+        version: link:../tsconfig
       '@tailwindcss/postcss':
         specifier: ^4.1.18
         version: 4.3.0

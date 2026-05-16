@@ -1,5 +1,5 @@
 {
-  "extends": "@guild0/typescript-config/react-library.json",
+  "extends": "@guild0/tsconfig/react-library.json",
   "compilerOptions": {
     "outDir": "dist"
   },

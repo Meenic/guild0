@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.15",
-    "@guild0/typescript-config": "workspace:*",
+    "@guild0/tsconfig": "workspace:*",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^25.1.0",
     "@types/react": "^19",
