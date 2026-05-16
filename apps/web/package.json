@@ -8,23 +8,24 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome lint --write",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
+    "@guild0/ui": "workspace:*",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
     "@biomejs/biome": "2.4.15",
+    "@guild0/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^25.1.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.2"
   }
 }
