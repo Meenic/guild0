@@ -1,21 +1,24 @@
-# guild0
+# Guild0
 
-Monorepo starter for Discord developers.
+A monorepo for building a Discord bot and its dashboard.
 
 ## What's inside
 
 | App / Package | Description |
 |---|---|
-| `apps/web` | Discord bot dashboard (Next.js) |
-| `apps/bot` | Discord bot (coming soon) |
+| `apps/web` | Dashboard app built with Next.js |
+| `apps/bot` | Discord bot workspace |
 | `packages/ui` | Shared UI components (shadcn/ui) |
+| `packages/db` | Database client (Drizzle ORM) |
+| `packages/tsconfig` | Shared TypeScript configuration |
+| `packages/auth` | Authentication utilities |
 
 ## Tech Stack
 
 - **Package Manager** — pnpm
 - **Monorepo** — Turborepo + pnpm workspaces
 - **Web** — Next.js 16, Tailwind CSS v4, shadcn/ui
-- **Bot** — coming soon
+- **Database** — Drizzle ORM + Neon
 
 ## Getting Started
 
@@ -28,7 +31,7 @@ cd guild0
 pnpm install
 
 # Set up environment variables
-cp apps/web/.env.example apps/web/.env.local
+cp .env.example .env
 
 # Start development
 pnpm dev
@@ -36,7 +39,7 @@ pnpm dev
 
 ## Requirements
 
-- [pnpm](https://pnpm.io) 9+
+- [pnpm](https://pnpm.io) 10+
 - [Node.js](https://nodejs.org) 22+
 
 ## Project Status

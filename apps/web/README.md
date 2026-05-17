@@ -1,8 +1,8 @@
-# web
+# Web
 
-The dashboard app for guild0. Built with Next.js 16.
+The Guild0 dashboard app, built with Next.js.
 
-Part of the [guild0](../../README.md) monorepo.
+Part of the [Guild0](../../README.md) monorepo.
 
 ## Stack
 
@@ -15,7 +15,7 @@ Part of the [guild0](../../README.md) monorepo.
 From the monorepo root:
 
 ```bash
-pnpm dev --filter web
+pnpm --filter web dev
 ```
 
 Or from this directory:
