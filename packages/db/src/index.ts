@@ -4,5 +4,4 @@ if (!process.env.DATABASE_URL) {
   throw new Error("DATABASE_URL is required to initialize the database client");
 }
 
-const db = drizzle(process.env.DATABASE_URL);
-export type DB = typeof db;
+export const db = drizzle(process.env.DATABASE_URL);
