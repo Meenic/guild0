@@ -1,7 +1,6 @@
 {
   "extends": "@guild0/tsconfig/react-library.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
       "@guild0/ui/*": ["./src/*"]
     }
