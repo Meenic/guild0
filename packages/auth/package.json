@@ -1,0 +1,13 @@
+{
+  "name": "@guild0/auth",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@guild0/db": "workspace:",
+    "better-auth": "^1.6.11"
+  },
+  "devDependencies": {
+    "@guild0/tsconfig": "workspace:",
+    "typescript": "^5.9.2"
+  }
+}
