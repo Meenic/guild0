@@ -5,6 +5,7 @@
   "scripts": {
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
     "db:studio": "drizzle-kit studio",
     "lint": "biome lint --write",
     "format": "biome format --write",
@@ -20,5 +21,9 @@
     "@types/node": "^25.1.0",
     "drizzle-kit": "^0.31.10",
     "typescript": "^5.9.2"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema/index.ts"
   }
 }
