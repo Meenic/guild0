@@ -5,17 +5,6 @@ import { nextCookies } from "better-auth/next-js";
 
 export { toNextJsHandler } from "better-auth/next-js";
 
-const discordClientId = process.env.DISCORD_CLIENT_ID;
-const discordClientSecret = process.env.DISCORD_CLIENT_SECRET;
-
-if (!discordClientId) {
-  throw new Error("[auth] DISCORD_CLIENT_ID is required");
-}
-
-if (!discordClientSecret) {
-  throw new Error("[auth] DISCORD_CLIENT_SECRET is required");
-}
-
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: "pg",
@@ -23,8 +12,8 @@ export const auth = betterAuth({
 
   socialProviders: {
     discord: {
-      clientId: discordClientId,
-      clientSecret: discordClientSecret,
+      clientId: process.env.DISCORD_CLIENT_ID!,
+      clientSecret: process.env.DISCORD_CLIENT_SECRET!,
       scope: ["identify", "email", "guilds"],
       mapProfileToUser: (profile) => ({
         discordId: profile.id,
