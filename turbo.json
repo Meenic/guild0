@@ -4,6 +4,15 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      "env": [
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
+        "DATABASE_URL",
+        "DISCORD_BOT_TOKEN",
+        "DISCORD_CLIENT_ID",
+        "DISCORD_CLIENT_SECRET",
+        "NEXT_PUBLIC_*"
+      ],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
@@ -20,14 +29,25 @@
     },
     "check-types": {
       "dependsOn": ["^build"],
+      "env": [
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
+        "DATABASE_URL",
+        "DISCORD_BOT_TOKEN",
+        "DISCORD_CLIENT_ID",
+        "DISCORD_CLIENT_SECRET",
+        "NEXT_PUBLIC_*"
+      ],
       "inputs": ["$TURBO_DEFAULT$"]
     },
     "db:generate": {
       "cache": false,
+      "env": ["DATABASE_URL"],
       "inputs": ["src/**/*.ts"]
     },
     "db:migrate": {
-      "cache": false
+      "cache": false,
+      "env": ["DATABASE_URL"]
     }
   }
 }

@@ -22,6 +22,12 @@ Create a local environment file from the example:
 cp apps/web/.env.example apps/web/.env
 ```
 
+For developer-specific values, prefer:
+
+```bash
+cp apps/web/.env.example apps/web/.env.local
+```
+
 Required values:
 
 | Variable | Purpose |
@@ -34,6 +40,8 @@ Required values:
 | `DATABASE_URL` | PostgreSQL/Neon connection string |
 | `NEXT_PUBLIC_URL` | Public app URL |
 
+`NEXT_PUBLIC_URL` is bundled into browser code by Next.js at build time. Keep secrets unprefixed and server-only.
+
 For local Discord OAuth development, configure the Discord Developer Portal redirect URL to:
 
 ```text
@@ -45,7 +53,7 @@ http://localhost:3000/api/auth/callback/discord
 Run from the repository root:
 
 ```bash
-pnpm --filter web dev
+pnpm dev:web
 ```
 
 Run from this directory:
@@ -59,12 +67,24 @@ The app runs on port `3000`.
 ## Scripts
 
 ```bash
-pnpm --filter web build
-pnpm --filter web start
+pnpm build:web
+pnpm start:web
 pnpm --filter web check-types
 pnpm --filter web lint
 pnpm --filter web format
 ```
+
+## Deployment
+
+Set environment variables in the hosting provider for each environment instead of committing `.env` files. Use environment-specific values for:
+
+| Environment | `BETTER_AUTH_URL` / `NEXT_PUBLIC_URL` |
+| --- | --- |
+| Local | `http://localhost:3000` |
+| Staging | Staging dashboard URL |
+| Production | Production dashboard URL |
+
+Run `pnpm build:web` during deployment and `pnpm start:web` only for a Node server deployment. Platforms with native Next.js support may run their own optimized start command.
 
 ## Important Routes
 

@@ -47,6 +47,8 @@ Once the bot has its own `package.json` and scripts, it should be runnable from 
 pnpm --filter bot dev
 ```
 
+Production bot deployment should be separate from the web deployment. The bot runtime should receive only bot-owned secrets such as `DISCORD_BOT_TOKEN` and its own `DATABASE_URL` credential for the target environment.
+
 ## Implementation Notes
 
 - Keep bot secrets server-only.
