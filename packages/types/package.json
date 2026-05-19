@@ -1,0 +1,13 @@
+{
+  "name": "@guild0/types",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./discord": "./src/discord.ts"
+  },
+  "devDependencies": {
+    "@guild0/tsconfig": "workspace:*",
+    "typescript": "^5.9.2"
+  }
+}

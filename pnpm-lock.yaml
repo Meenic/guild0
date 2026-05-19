@@ -26,6 +26,9 @@ importers:
       '@guild0/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@guild0/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@guild0/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -124,6 +127,15 @@ importers:
         version: 5.9.2
 
   packages/tsconfig: {}
+
+  packages/types:
+    devDependencies:
+      '@guild0/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
 
   packages/ui:
     dependencies:

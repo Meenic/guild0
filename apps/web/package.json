@@ -14,6 +14,7 @@
   "dependencies": {
     "@guild0/auth": "workspace:*",
     "@guild0/db": "workspace:*",
+    "@guild0/types": "workspace:*",
     "@guild0/ui": "workspace:*",
     "drizzle-orm": "^0.45.2",
     "next": "16.2.6",

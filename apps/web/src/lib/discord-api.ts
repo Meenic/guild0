@@ -1,14 +1,7 @@
+import type { DiscordGuild } from "@guild0/types";
 import { env } from "@/env";
 
 const DISCORD_API = "https://discord.com/api/v10";
-
-export interface DiscordGuild {
-  id: string;
-  name: string;
-  icon: string | null;
-  owner: boolean;
-  permissions: string;
-}
 
 // User and guild
 
@@ -24,9 +17,7 @@ export async function getUserGuilds(
 
 // Bot API
 
-export async function getBotGuilds(): Promise<
-  Array<{ id: string; name: string; icon: string | null }>
-> {
+export async function getBotGuilds(): Promise<DiscordGuild[]> {
   const res = await fetch(`${DISCORD_API}/users/@me/guilds`, {
     headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}` },
     next: { revalidate: 300 },
