@@ -2,10 +2,10 @@
   "name": "@guild0/validations",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    ".": "./src/index.ts",
-    "./guild": "./src/guild.ts",
-    "./discord": "./src/discord.ts"
+  "scripts": {
+    "lint": "biome lint --write",
+    "format": "biome format --write",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "zod": "^4.4.3"
@@ -13,5 +13,10 @@
   "devDependencies": {
     "@guild0/tsconfig": "workspace:",
     "typescript": "^5.9.2"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./guild": "./src/guild.ts",
+    "./discord": "./src/discord.ts"
   }
 }
