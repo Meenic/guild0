@@ -12,10 +12,11 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@guild0/auth": "workspace:*",
-    "@guild0/db": "workspace:*",
-    "@guild0/types": "workspace:*",
-    "@guild0/ui": "workspace:*",
+    "@guild0/auth": "workspace:",
+    "@guild0/db": "workspace:",
+    "@guild0/types": "workspace:",
+    "@guild0/ui": "workspace:",
+    "@guild0/validations": "workspace:",
     "drizzle-orm": "^0.45.2",
     "next": "16.2.6",
     "next-themes": "^0.4.6",
@@ -25,7 +26,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.15",
-    "@guild0/tsconfig": "workspace:*",
+    "@guild0/tsconfig": "workspace:",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^25.1.0",
     "@types/react": "^19",

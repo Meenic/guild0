@@ -21,7 +21,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@guild0/tsconfig": "workspace:*",
+    "@guild0/tsconfig": "workspace:",
     "@tailwindcss/postcss": "^4.1.18",
     "@turbo/gen": "^2.9.14",
     "@types/node": "^25.1.0",

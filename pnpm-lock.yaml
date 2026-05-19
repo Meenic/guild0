@@ -21,17 +21,20 @@ importers:
   apps/web:
     dependencies:
       '@guild0/auth':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../../packages/auth
       '@guild0/db':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../../packages/db
       '@guild0/types':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../../packages/types
       '@guild0/ui':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../../packages/ui
+      '@guild0/validations':
+        specifier: 'workspace:'
+        version: link:../../packages/validations
       drizzle-orm:
         specifier: ^0.45.2
         version: 0.45.2(@neondatabase/serverless@1.1.0)(kysely@0.28.17)
@@ -55,7 +58,7 @@ importers:
         specifier: 2.4.15
         version: 2.4.15
       '@guild0/tsconfig':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../../packages/tsconfig
       '@tailwindcss/postcss':
         specifier: ^4
@@ -131,7 +134,7 @@ importers:
   packages/types:
     devDependencies:
       '@guild0/tsconfig':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../tsconfig
       typescript:
         specifier: ^5.9.2
@@ -171,7 +174,7 @@ importers:
         version: 4.4.3
     devDependencies:
       '@guild0/tsconfig':
-        specifier: workspace:*
+        specifier: 'workspace:'
         version: link:../tsconfig
       '@tailwindcss/postcss':
         specifier: ^4.1.18
@@ -194,6 +197,19 @@ importers:
       tailwindcss:
         specifier: ^4.1.18
         version: 4.3.0
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.2
+
+  packages/validations:
+    dependencies:
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+    devDependencies:
+      '@guild0/tsconfig':
+        specifier: 'workspace:'
+        version: link:../tsconfig
       typescript:
         specifier: ^5.9.2
         version: 5.9.2

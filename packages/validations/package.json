@@ -1,10 +1,14 @@
 {
-  "name": "@guild0/types",
+  "name": "@guild0/validations",
   "version": "0.0.0",
   "private": true,
   "exports": {
     ".": "./src/index.ts",
+    "./guild": "./src/guild.ts",
     "./discord": "./src/discord.ts"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@guild0/tsconfig": "workspace:",
