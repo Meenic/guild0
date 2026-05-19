@@ -39,6 +39,10 @@ export const guildMemberRelations = relations(guildMember, ({ one }) => ({
     fields: [guildMember.guildId],
     references: [guild.id],
   }),
+  user: one(user, {
+    fields: [guildMember.userId],
+    references: [user.id],
+  }),
 }));
 
 export type GuildMember = typeof guildMember.$inferSelect;

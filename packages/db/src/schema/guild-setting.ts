@@ -1,3 +1,4 @@
+import { relations } from "drizzle-orm";
 import { boolean, jsonb, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { guild } from "./guild";
 
@@ -20,5 +21,12 @@ export const guildSetting = pgTable("guild_setting", {
     .notNull()
     .$onUpdate(() => new Date()),
 });
+
+export const guildSettingRelations = relations(guildSetting, ({ one }) => ({
+  guild: one(guild, {
+    fields: [guildSetting.guildId],
+    references: [guild.id],
+  }),
+}));
 
 export type GuildSetting = typeof guildSetting.$inferSelect;

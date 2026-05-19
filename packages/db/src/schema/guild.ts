@@ -1,6 +1,7 @@
 import { relations } from "drizzle-orm";
 import { bigint, boolean, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { guildMember } from "./guild-member";
+import { guildSetting } from "./guild-setting";
 
 export const guild = pgTable("guild", {
   id: text("id").primaryKey(),
@@ -19,8 +20,12 @@ export const guild = pgTable("guild", {
     .$onUpdate(() => new Date()),
 });
 
-export const guildRelations = relations(guild, ({ many }) => ({
+export const guildRelations = relations(guild, ({ one, many }) => ({
   members: many(guildMember),
+  setting: one(guildSetting, {
+    fields: [guild.id],
+    references: [guildSetting.guildId],
+  }),
 }));
 
 export type Guild = typeof guild.$inferSelect;
